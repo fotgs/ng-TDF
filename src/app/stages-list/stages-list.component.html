@@ -1,6 +1,7 @@
-<div *ngIf="stages.length === 0" class="loading">
+<div *ngIf="stages.length === 0 && errorMsg === null" class="loading">
   <mat-spinner></mat-spinner> Loading stage details
 </div>
+<div *ngIf="errorMsg">{{ errorMsg }}</div>
 <mat-accordion>
   <mat-expansion-panel *ngFor="let stage of stages">
     <mat-expansion-panel-header>

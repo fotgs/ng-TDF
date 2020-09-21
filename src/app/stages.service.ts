@@ -14,10 +14,6 @@ export class StagesService {
   constructor(private _http: HttpClient) {}
 
   public getStages(): Observable<IStage[]> {
-    return this._http.get<IStage[]>(this._url).pipe(
-      catchError((err: HttpErrorResponse) => {
-        return Observable.throw(err.message || "Server error");
-      })
-    );
+    return this._http.get<IStage[]>(this._url);
   }
 }
