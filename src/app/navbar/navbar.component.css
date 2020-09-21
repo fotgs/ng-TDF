@@ -1,0 +1,53 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+}
+
+.navbar h1 a,
+.navbar .material-icons,
+.navbar .logo-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  vertical-align: middle;
+  padding: 0 2px;
+}
+
+.navbar .material-icons {
+  font-size: 2rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mat-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button {
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.mat-button:hover,
+.active {
+  background-color: #101b5a;
+}
