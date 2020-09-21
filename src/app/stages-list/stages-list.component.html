@@ -1,0 +1,44 @@
+{{ errorMsg }}
+<mat-spinner *ngIf="stages.length === 0"></mat-spinner>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let stage of stages">
+    <mat-expansion-panel-header>
+      <mat-panel-title>Stage {{ stage.stageId }}</mat-panel-title>
+      <mat-panel-description>
+        &#9872; {{ stage.stageStart }} &#10148; {{ stage.stageFinish }} &#9873;
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="Stage Profile">
+        <img
+          class="stage-profile"
+          [src]="stage.stageProfile"
+          alt="Stage {{ stage.stageId }} - {{ stage.stageStart }} -> {{
+            stage.stageFinish
+          }}"
+          title="Stage {{ stage.stageId }} - {{ stage.stageStart }} -> {{
+            stage.stageFinish
+          }}"
+        />
+      </mat-tab>
+      <mat-tab label="Stage Details">
+        <div class="stage-details">
+          <div class="stage-info">
+            <h3>Stage Info</h3>
+            <app-stage-details [stageObj]="stage"></app-stage-details>
+          </div>
+          <div class="stage-winner">
+            <h3>Stage Winner</h3>
+            <div class="stage-winner-rider">
+              <app-rider
+                [rider]="stage.stageRankings[0].rider"
+                [riderTime]="stage.stageRankings[0].time"
+              ></app-rider>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Stage Rankings"> Content 3 </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>

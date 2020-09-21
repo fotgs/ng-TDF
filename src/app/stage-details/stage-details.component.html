@@ -1,0 +1,29 @@
+<div class="stage-date">
+  <div class="stage-details-icon">
+    <i class="fas fa-calendar-alt fa-3x"></i>
+  </div>
+  <div class="stage-details-text">
+    <div class="icon-title">Date</div>
+    <div class="icon-data">
+      {{ stageDate | date: "EEE, MMM dd, yyyy" }}
+    </div>
+  </div>
+</div>
+<div class="stage-length">
+  <div class="stage-details-icon">
+    <i class="fas fa-route fa-3x"></i>
+  </div>
+  <div class="stage-details-text">
+    <div class="icon-title">Length</div>
+    <div class="icon-data">{{ stage.stageLengthKm }}km</div>
+  </div>
+</div>
+<div class="stage-type">
+  <div class="stage-details-icon">
+    <i class="fas fa-3x" [ngClass]="stageTypeClass"></i>
+  </div>
+  <div class="stage-details-text">
+    <div class="icon-title">Type</div>
+    <div class="icon-data">{{ stageType }}</div>
+  </div>
+</div>

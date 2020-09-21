@@ -1,0 +1,15 @@
+.stage-date,
+.stage-length,
+.stage-type {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+.stage-details-text {
+  margin-left: 10px;
+}
+
+.stage-details-text .icon-title {
+  font-weight: bold;
+}

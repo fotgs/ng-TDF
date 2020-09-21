@@ -1,0 +1,20 @@
+.stage-profile {
+  width: 100%;
+}
+
+.stage-details {
+  display: flex;
+}
+
+.stage-info {
+  width: 40%;
+}
+
+.stage-winner {
+  text-align: center;
+  width: 60%;
+}
+
+.stage-info h3 {
+  text-align: center;
+}
