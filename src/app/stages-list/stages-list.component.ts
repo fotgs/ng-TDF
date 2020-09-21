@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { StagesService } from "../stages.service";
 import { IStage } from "../shared/models/stage.model";
-import { HttpErrorResponse } from "@angular/common/http";
 
 @Component({
   selector: "app-stages-list",
@@ -12,9 +11,12 @@ export class StagesListComponent implements OnInit {
   stages: IStage[] = [];
   errorMsg: string = null;
 
-  constructor(private _stages: StagesService) {}
+  constructor(private _stages: StagesService) {
+    console.log("StagesList constructor");
+  }
 
   ngOnInit(): void {
+    console.log("StagesList ngOnInit");
     this._stages.getStages().subscribe(
       (data) => {
         this.stages = data;
